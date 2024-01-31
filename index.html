@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href= "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Delius+Unicase:wght@700&family=Inter:wght@500&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class = 'container'>
+        <div class = 'header'>
+            <div class = "header_left">
+                <div>ROCK</div>
+                <div>PAPER</div>
+                <div>SCISSOR</div>
+            </div>
+
+            <div class = "header_right">
+                <div class = " score score_you">
+                    <div>YOUR </div>
+                    <div>SCORE</div>
+                    <div class ="display_sc your_score">0</div>
+                </div>
+
+                <div class = "score score_comp">
+                    <div>COMPUTER</div>
+                    <div>SCORE</div>
+                    <div class = " display_sc comp_score">0</div>
+                </div>
+            </div>
+        </div>
+        
+            <div class = "triangle">
+                <div class="part1">
+                    <div class = "hand stone">
+                        <img src ="img/stone.png" onclick="pickUserHand('stone')">
+                    </div>
+                    <div class="line l1"></div>
+                    <div class = "hand scissor">
+                        <img src ="img/scissor.png" onclick="pickUserHand('scissor')">
+                    </div>
+                </div>
+
+                <div class = "part2">
+                    <div class="line l2"></div>
+                    <div class="line l3"></div>
+                </div>
+
+                <div class = "part3">
+                    <div class = "hand paper">
+                        <img src="img/paper.png" onclick="pickUserHand('paper')">
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class = "rules">
+                <h2 class = "gamerules"> Game Rules</h2>
+                <ul style="list-style-type:square;">
+                    <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                    <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                    <li>If both players lay down the same hand, each player lays down another hand</li>
+                </ul>
+            </div>
+            <div class="cross-btn">
+                <img src = "img/X.png" onclick="closeRules()">
+            </div>
+
+            <div class="rules-btn">
+                <div onclick="displayRules()">RULES</div>
+            </div>
+
+            <div class = "next-btn">
+                <div onclick="location.href = 'winpage.html';">NEXT</div>
+            </div>
+
+        <div class = "contest">
+            <div class = "userHand">
+                <div>YOU PICKED</div>
+                <div class = "handImgContainer handImgContainer1">
+                    <img  src = "img/stone.png" id = "userPickedImg">
+                </div>
+                
+            </div>
+
+            <div class = "verdict">
+                <div class = "dispDecision" > YOU WIN </div>
+                <div class = "againstpc" > AGAINST PC </div>
+                <div class = "playAgain" onclick="restart()"> PLAY AGAIN </div>
+            </div>
+
+            <div class = "compHand">
+                <div>PC PICKED</div>
+                <div class = " handImgContainer handImgContainer2">
+                    <img src = "img/paper.png" id = "compPickedImg">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src = "app.js"></script>
+</body>
+</html>
